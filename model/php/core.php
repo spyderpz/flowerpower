@@ -1,7 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: spinn
- * Date: 20.12.2018
- * Time: 16:59
- */
+$host = 'localhost';
+$db   = 'flowerpower';
+$user = 'flowerpower';
+$pass = 'flowerpower)!@';
+$charset = 'utf8';
+
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$opt = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+$pdo = new PDO($dsn, $user, $pass, $opt);
+//if session isnt started do this
+if(session_id() == '' || !isset($_SESSION)) {
+    session_start();
+}
+

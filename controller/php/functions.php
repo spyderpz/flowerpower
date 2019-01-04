@@ -1,4 +1,6 @@
 <?php
+require_once("../../model/php/core.php");
+
 /**
  * Created by PhpStorm.
  * User: spinn
