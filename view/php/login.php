@@ -9,7 +9,7 @@ require_once("../../view/php/menu.php");
     <input type="text" name="email" placeholder="someone@something.com">
     <br>
     Wachtwoord:<br>
-    <input type="text" name="wachtwoord" value="*********">
+    <input type="text" name="wachtwoord" placeholder="*********">
     <br><br>
     <input type="submit" value="Submit">
 </form>

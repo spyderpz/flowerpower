@@ -8,7 +8,7 @@ class user{
         $usernamequery->execute(['email' => $email]);
         $userres = $usernamequery->fetch();
         if($userres){
-            $passquery = $pdo->prepare("SELECT * FROM personen WHERE password = :password AND Email = :email");
+            $passquery = $pdo->prepare("SELECT * FROM personen WHERE Wachtwoord = :password AND Email = :email");
             $passquery->execute(['password' => $wachtwoord,'email' => $email]);
             $userres = $passquery->fetch();
             if($userres){
