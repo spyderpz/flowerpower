@@ -6,28 +6,29 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/view/css/main.css">
-    <link rel="stylesheet" href="/view/css/login.css">
-    <title>Flower Power | Login</title>
+    <link rel="stylesheet" href="/view/css/contact.css">
+    <title>Flower Power | Contact</title>
   </head>
   <body>
     <?php
     require_once("../../view/php/menu.php");
     ?>
 
-      <div class="row login-wrapper">
-        <div class="img-div col-9">
-
-        </div>
-        <div class="form-div col-3">
-          <form value="login" action="index.php" method="post">
+      <div class="row contact-wrapper">
+        <div class="form-wrapper col-6">
+          <h3>Stuur ons een berichtje!</h3>
+          <form>
             <div class="form-group">
               <label for="email">Email:</label>
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Voorbeeld@voorbeeld.com">
-              <small id="emailHelp" class="form-text text-muted">We delen je email adress niet aan de russen.</small>
             </div>
             <div class="form-group">
-              <label for="wachtwoord">Wachtwoord</label>
-              <input type="password" class="form-control" id="wachtwoord" placeholder="******">
+              <label for="subject">Onderwerp:</label>
+              <input type="text" class="form-control" id="subject" placeholder="onderbroeken">
+            </div>
+            <div class="form-group">
+              <label for="bericht">Bericht:</label>
+              <textarea class="form-control" id="bericht" rows="4" cols="50">godverdomme wat een lekker berichtje</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

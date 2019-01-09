@@ -1,0 +1,17 @@
+.form-div{
+  border-left: 5px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper{
+  height: 95vh;
+  width: 100vw;
+}
+
+.img-div{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}

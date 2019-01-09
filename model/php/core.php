@@ -16,4 +16,3 @@ $pdo = new PDO($dsn, $user, $pass, $opt);
 if(session_id() == '' || !isset($_SESSION)) {
     session_start();
 }
-
