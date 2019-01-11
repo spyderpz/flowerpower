@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="/view/css/main.css">
-    <link rel="stylesheet" href="/view/css/producten.css">
+    <link rel="stylesheet" href="../../view/css/main.css">
+    <link rel="stylesheet" href="../../view/css/producten.css">
     <title>Flower Power | Producten</title>
   </head>
   <body>
@@ -18,6 +18,10 @@
 
     ?>
 
+  <div class="header">
+
+  </div>
+
   <div class="container">
 
     <div class="row">
@@ -25,7 +29,7 @@
       <div class='col-sm-4 product-wrapper'>
         <div class='panel panel-primary'>
           <div class='panel-heading'>Mooi bloempje</div>
-          <div class='panel-body'><img src='/model/img/bloemen/roze.jpg' class='img-responsive' style='width:100%' alt='Image'></div>
+          <div class='panel-body'><img src='../../model/img/bloemen/roze.jpg' class='img-responsive' style='width:100%' alt='Image'></div>
           <hr>
           <div class='panel-footer'>een heel mooi bloemje koop heb maar</div>
         </div>
