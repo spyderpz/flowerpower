@@ -46,10 +46,17 @@
       <div class="col-2">
 
       </div>
-      <div class="5">
-        <div class="form-wrapper col-12">
-          <h3>karspellaan 21</h3>
+      <div class="locatie-wrapper col-3">
+        <div class="locatie-content ">
+          <h5 class="locatie-text">
+            <br>
+            karspellaan 21,
+            4444 AF <br>
+            0591- 23 32323 <br>
+            info@flowerpower.nl </h5>
+          <div class="locatie-1">
 
+          </div>
         </div>
       </div>
       </div>

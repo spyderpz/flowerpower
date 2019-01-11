@@ -1,6 +1,9 @@
 html{
   position: relative;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+
 }
 
 .navbar{
