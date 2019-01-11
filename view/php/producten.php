@@ -12,10 +12,8 @@
   <body>
     <?php
     require_once("../../view/php/menu.php");
+    require_once ("../../controller/php/product.php");
     ?>
-  <div class="header">
-
-  </div>
 
   <div class="container">
 
@@ -30,27 +28,12 @@
         </div>
       </div>
 
-      <!-- <?php
 
-        foreach ($producten as $product) {
-          echo "
-          <div class='col-sm-4 product-wrapper'>
-            <div class='panel panel-primary'>
-              <div class='panel-heading'>Mooi bloempje</div>
-              <div class='panel-body'><img src='https://placehold.it/150x80?text=IMAGE' class='img-responsive' style='width:100%' alt='Image'></div>
-              <div class='panel-footer'>een heel mooi bloemje koop heb maar</div>
-            </div>
-          </div>
-          ";
-        }
-
-      ?> -->
 
     </div>
   </div>
 
   <footer>
-    <p>dit is een dikke footer mwoan</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
