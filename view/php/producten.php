@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="/view/css/main.css">
-    <link rel="stylesheet" href="/view/css/producten.css">
+    <link rel="stylesheet" href="../../view/css/main.css">
+    <link rel="stylesheet" href="../../view/css/producten.css">
     <title>Flower Power | Producten</title>
   </head>
   <body>
@@ -17,6 +17,10 @@
     $product->getproducts();
 
     ?>
+
+  <div class="header">
+
+  </div>
 
   <div class="container">
 
