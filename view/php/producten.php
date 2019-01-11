@@ -13,6 +13,9 @@
     <?php
     require_once("../../view/php/menu.php");
     require_once ("../../controller/php/product.php");
+    $product = new product();
+    $product->getproducts();
+
     ?>
 
   <div class="container">
