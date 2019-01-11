@@ -1,8 +1,16 @@
+.header{
+  width: 100vw;
+  height: 30vh;
+  background-image: url('/model/img/banner/header.jpg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin-bottom: 5%;
+}
+
 .contact-wrapper{
   height: 95vh;
-  width: 100vw;
   display: flex;
-  justify-content:center;
   align-items: center;
 }
 

@@ -14,8 +14,17 @@
     require_once("../../view/php/menu.php");
     ?>
 
-      <div class="row contact-wrapper">
-        <div class="form-wrapper col-6">
+    <div class="header">
+
+    </div>
+    <div class="row content">
+
+
+      <div class="col-2">
+
+      </div>
+      <div class="row contact-wrapper col-5">
+        <div class="form-wrapper col-8">
           <h3>Stuur ons een berichtje!</h3>
           <form>
             <div class="form-group">
@@ -33,6 +42,16 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
+      </div>
+      <div class="col-2">
+
+      </div>
+      <div class="5">
+        <div class="form-wrapper col-12">
+          <h3>karspellaan 21</h3>
+
+        </div>
+      </div>
       </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
