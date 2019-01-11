@@ -25,7 +25,7 @@
       <div class='col-sm-4 product-wrapper'>
         <div class='panel panel-primary'>
           <div class='panel-heading'>Mooi bloempje</div>
-          <div class='panel-body'><img src='/model/img/bloemen/roze.jpg' class='img-responsive' style='width:100%' alt='Image'></div>
+          <div class='panel-body'><img src='../../model/img/bloemen/roze.jpg' class='img-responsive' style='width:100%' alt='Image'></div>
           <hr>
           <div class='panel-footer'>een heel mooi bloemje koop heb maar</div>
         </div>
