@@ -11,7 +11,7 @@
   </head>
   <body>
     <?php
-    require_once("../../view/php/menu.php");
+    require_once("../../view/php/partials/_menu.php");
     require_once ("../../controller/php/product.php");
     require_once("../../view/php/partials/_header.php");
     $product = new product();
