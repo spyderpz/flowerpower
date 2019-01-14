@@ -12,18 +12,20 @@
   <body>
     <?php
     require_once("../../view/php/menu.php");
+    require_once("../../view/php/partials/_header.php");
     ?>
 
-    <div class="header">
 
-    </div>
+
     <div class="row content">
 
 
-      <div class="col-2">
+      <div class="col-7">
 
-      </div>
-      <div class="row contact-wrapper col-5">
+        <div class="row contact-wrapper col-12">
+          <div class="col-2">
+
+          </div>
         <div class="form-wrapper col-8">
           <h3>Stuur ons een berichtje!</h3>
           <form>
@@ -43,23 +45,68 @@
           </form>
         </div>
       </div>
-      <div class="col-2">
 
       </div>
+      <div class="col-5">
 
 
-      <div class="locatie-wrapper col-3">
-        <div class="locatie-content ">
+
+
+      <div class="locatie-wrapper col-9">
+        <div class="locatie-content col-6">
           <h5 class="locatie-text">
             <br>
             karspellaan 21,
             4444 AF <br>
             0591- 23 32323 <br>
             info@flowerpower.nl </h5>
-          <div class="locatie-1">
+            </div>
+            <div class="col-6" style="padding: 5%; padding-right: 0%;">
+              <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+            </div>
+      </div>
 
-          </div>
-        </div>
+      <div class="locatie-wrapper col-9">
+        <div class="locatie-content col-6">
+          <h5 class="locatie-text">
+            <br>
+            karspellaan 21,
+            4444 AF <br>
+            0591- 23 32323 <br>
+            info@flowerpower.nl </h5>
+            </div>
+            <div class="col-6" style="padding: 5%; padding-right: 0%;">
+              <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+            </div>
+      </div>
+
+      <div class="locatie-wrapper col-9">
+        <div class="locatie-content col-6">
+          <h5 class="locatie-text">
+            <br>
+            karspellaan 21,
+            4444 AF <br>
+            0591- 23 32323 <br>
+            info@flowerpower.nl </h5>
+            </div>
+            <div class="col-6" style="padding: 5%; padding-right: 0%;">
+              <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+            </div>
+      </div>
+
+      <div class="locatie-wrapper col-9">
+        <div class="locatie-content col-6">
+          <h5 class="locatie-text">
+            <br>
+            karspellaan 21,
+            4444 AF <br>
+            0591- 23 32323 <br>
+            info@flowerpower.nl </h5>
+            </div>
+            <div class="col-6" style="padding: 5%; padding-right: 0%;">
+              <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+            </div>
+      </div>
       </div>
 
       </div>
