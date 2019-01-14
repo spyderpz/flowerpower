@@ -10,6 +10,3 @@
     <title>Flower Power | <?php echo $customTitle ?> </title>
   </head>
   <body>
-    <div class="header">
-      <img src="../../model/img/logo/logo.png" alt="">
-    </div>
