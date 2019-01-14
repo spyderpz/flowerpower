@@ -1,5 +1,5 @@
 <div class="header">
-  <h1>FlowerPower</h1>
+  <img src="../../model/img/logo/logo.png" alt="">
 </div>
 
 <?php
