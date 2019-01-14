@@ -9,3 +9,13 @@ html{
 .navbar{
   height: 5vh;
 }
+
+footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-top: 5%;
+  height: 50px;
+  width: 100vw;
+  background-color: blue;
+}
