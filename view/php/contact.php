@@ -15,75 +15,75 @@
         <form>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Voorbeeld@voorbeeld.com">
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="voorbeeld@voorbeeld.com">
         </div>
         <div class="form-group">
           <label for="subject">Onderwerp:</label>
-          <input type="text" class="form-control" id="subject" placeholder="onderbroeken">
+          <input type="text" class="form-control" id="subject" placeholder="onderwerp">
         </div>
         <div class="form-group">
           <label for="bericht">Bericht:</label>
-          <textarea class="form-control" id="bericht" rows="4" cols="50">godverdomme wat een lekker berichtje</textarea>
+          <textarea class="form-control" id="bericht" rows="4" cols="50"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
   </div>
-  <div class="col-5">
+  <div class="col-5 animated delay-05s fadeInUp">
     <div class="locatie-wrapper col-9">
       <div class="locatie-content col-6">
         <h5 class="locatie-text">
           <br>
-          karspellaan 21,
+          Karspellaan 21,<br>
           4444 AF <br>
           0591- 23 32323 <br>
           info@flowerpower.nl
         </h5>
         </div>
-        <div class="col-6" style="padding: 5%; padding-right: 0%;">
-          <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+        <div class="col-6 img-box">
+          <img src="../../model/img/locaties/winkel1.jpg" alt="">
         </div>
       </div>
       <div class="locatie-wrapper col-9">
         <div class="locatie-content col-6">
           <h5 class="locatie-text">
             <br>
-            karspellaan 21,
-            4444 AF <br>
-            0591- 23 32323 <br>
+            Flevostraat 95,<br>
+            3445 BB <br>
+            0591- 43 32343 <br>
             info@flowerpower.nl </h5>
         </div>
-      <div class="col-6" style="padding: 5%; padding-right: 0%;">
-        <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+      <div class="col-6 img-box">
+        <img src="../../model/img/locaties/winkel2.jpg" alt="">
       </div>
     </div>
     <div class="locatie-wrapper col-9">
       <div class="locatie-content col-6">
         <h5 class="locatie-text">
           <br>
-          karspellaan 21,
-          4444 AF <br>
-          0591- 23 32323 <br>
+          Snavelkavel 34,<br>
+          6565 BG <br>
+          0591- 23 34455 <br>
           info@flowerpower.nl
         </h5>
       </div>
-      <div class="col-6" style="padding: 5%; padding-right: 0%;">
-        <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+      <div class="col-6 img-box">
+        <img src="../../model/img/locaties/winkel3.jpg" alt="">
       </div>
     </div>
     <div class="locatie-wrapper col-9">
       <div class="locatie-content col-6">
         <h5 class="locatie-text">
           <br>
-          karspellaan 21,
-          4444 AF <br>
-          0591- 23 32323 <br>
+          Berenspel 98,<br>
+          4334 ZZ <br>
+          0591- 42 32645 <br>
           info@flowerpower.nl
         </h5>
       </div>
-      <div class="col-6" style="padding: 5%; padding-right: 0%;">
-        <img src="../../model/img/locaties/winkel1.jpg" alt="" style="max-width: 100%; max-height: 100%;">
+      <div class="col-6 img-box">
+        <img src="../../model/img/locaties/winkel4.png" alt="">
       </div>
     </div>
   </div>

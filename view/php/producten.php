@@ -8,7 +8,7 @@
   $product->getproducts();
 ?>
 <div class="container">
-  <div class="row">
+  <div class="row animated delay-05s fadeInUp">
     <div class='col-sm-4 product-wrapper'>
       <div class='panel panel-primary'>
         <div class='panel-heading'>Mooi bloempje</div>
