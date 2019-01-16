@@ -42,7 +42,7 @@
         </h5>
         </div>
         <div class="col-6 img-box">
-          <img src="../../model/img/locaties/winkel1.jpg" alt="">
+          <img src="../../model/img/locaties/winkel1.jpg" alt="1e locatie">
         </div>
       </div>
       <div class="locatie-wrapper col-9">
@@ -55,7 +55,7 @@
             info@flowerpower.nl </h5>
         </div>
       <div class="col-6 img-box">
-        <img src="../../model/img/locaties/winkel2.jpg" alt="">
+        <img src="../../model/img/locaties/winkel2.jpg" alt="2e locatie">
       </div>
     </div>
     <div class="locatie-wrapper col-9">
@@ -69,7 +69,7 @@
         </h5>
       </div>
       <div class="col-6 img-box">
-        <img src="../../model/img/locaties/winkel3.jpg" alt="">
+        <img src="../../model/img/locaties/winkel3.jpg" alt="3e locatie">
       </div>
     </div>
     <div class="locatie-wrapper col-9">
@@ -83,7 +83,7 @@
         </h5>
       </div>
       <div class="col-6 img-box">
-        <img src="../../model/img/locaties/winkel4.png" alt="">
+        <img src="../../model/img/locaties/winkel4.png" alt="4e locatie">
       </div>
     </div>
   </div>
