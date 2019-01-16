@@ -1,11 +1,11 @@
 <?php
-if(isset($_POST['email'])){
-    require_once("../../controller/php/user.php");
-    echo "hoi";
-    $user = new user();
-    $test = $user->login($_POST['email'],$_POST['wachtwoord']);
-    echo $test;
-}
+//if(isset($_POST['email'])){
+//    require_once("../../../controller/php/user.php");
+//    echo "hoi";
+//    $user = new user();
+//    $test = $user->login($_POST['email'],$_POST['wachtwoord']);
+//    echo $test;
+//}
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php">Flower Power</a>

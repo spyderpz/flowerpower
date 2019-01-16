@@ -22,7 +22,7 @@ class user
             echo false;
         }
     }
-    function register($voornaam, $achternaam, $wachtwoord, $email, $postcode, $woonplaats){
+    function register($voornaam, $achternaam, $wachtwoord, $email,$geboortedatum, $postcode, $woonplaats){
         global $pdo;
         $availabilityquery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");
         $availabilityquery->execute(['email' => $email]);
@@ -30,9 +30,9 @@ class user
         if ($userres) {
             return false;
         }else{
-            $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:Postcode,:Woonplaats)");
-            $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachwoord' => $wachtwoord, 'Email' => $email, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
-            return $correct;
+            $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats)");
+            $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
+            return true;
         }
     }
 }
