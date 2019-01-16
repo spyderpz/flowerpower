@@ -3,8 +3,6 @@
   $customTitle = "Home";
   require_once("../../view/php/partials/_header.php");
   require_once("../../view/php/partials/_menu.php");
-
-
 ?>
 
 <div class="container">
