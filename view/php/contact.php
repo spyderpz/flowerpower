@@ -25,7 +25,7 @@
           <label for="bericht">Bericht:</label>
           <textarea class="form-control" id="bericht" rows="4" cols="50"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
       </div>
     </div>

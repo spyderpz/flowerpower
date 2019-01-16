@@ -1,6 +1,8 @@
-<script src="../../view/plugins/jquery/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="../../view/plugins/popper/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="../../view/plugins/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="../../view/plugins/jquery/jquery.min.js"></script>
+<script src="../../view/plugins/popper/popper.min.js"></script>
+<script src="../../view/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../view/plugins/imissyou/imissyou.min.js"></script>
+<script src="../../view/js/ikmisje.js" charset="utf-8"></script>
 <?php echo $customScript ?>
 </body>
 </html>
