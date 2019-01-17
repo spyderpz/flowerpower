@@ -1,9 +1,13 @@
+/* Dit is de main.css deze css word ingeladen op elke pagina */
+
 html,body{
   position: relative;
   min-height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+/* Dit is de css van de navigatiebalk */
 
 .navbar{
   height: 5vh;
@@ -12,14 +16,7 @@ html,body{
   box-shadow: 2px 7px 18px -5px rgba(0,0,0,0.11);
 }
 
-footer{
-  left: 0;
-  bottom: 0;
-  margin-top: 5%;
-  height: 100px;
-  width: 100vw;
-  background-color: #B8B8B8;
-}
+/* Dit is de css van de header achtergrond boven aan de pagina */
 
 .header{
   display: flex;
@@ -33,6 +30,47 @@ footer{
   background-size: 100% auto;
 }
 
+/* Dit is de css van het logo dat in de header staat */
+
 .logo{
   max-height: 100%;
+}
+
+/* Dit is de css van de footer onder aan de pagina */
+
+footer{
+  left: 0;
+  bottom: 0;
+  margin-top: 5%;
+  height: 100px;
+  width: 100vw;
+  background-color: #B8B8B8;
+}
+
+footer .row{
+  height: 100%;
+}
+
+.footer-info{
+  padding-left: 2%;
+}
+
+.social-wrapper{
+  height: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2%;
+}
+
+.social-wrapper img{
+  height: 50%;
+}
+
+.social-wrapper a{
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin-right:3%;
 }

@@ -1,6 +1,4 @@
-footer{
-position: absolute;
-}
+/* Dit is de css die op de homepagina word geladen deze word ook alleen geladen op de homepagina */
 
 .container{
   margin-top: 2%;
@@ -12,11 +10,15 @@ position: absolute;
   align-items: center;
 }
 
+/* Dit is de css van het text stukje aan de linkerkant van de pagina */
+
 .text-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* Dit is de css van de afbeelding aan de rechterkant van de pagina */
 
 .img-wrapper{
   display: flex;
@@ -29,4 +31,10 @@ position: absolute;
   width: 100%;
   height: 100%;
   padding: 10%;
+}
+
+/* Dit is de css om de footer in de main.css te overiden */
+
+footer{
+position: absolute;
 }

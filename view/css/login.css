@@ -1,15 +1,21 @@
-.form-div{
-  background-color: 	#F8F8F8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* Dit is de css van de login pagina deze word ook alleen op de login pagina geladen */
 
 .login-wrapper{
   height: 95vh;
   width: 100vw;
   margin: 0;
 }
+
+/* Dit is css van de rechterkant waar de form in staat */
+
+.form-div{
+  background-color: #F8F8F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dit is css van de afbeelding aan de linkerkant van de pagina */
 
 .img-div{
   height: 100%;
