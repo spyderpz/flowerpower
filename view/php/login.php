@@ -3,13 +3,12 @@ $customCss = "<link rel='stylesheet' href='../../view/css/login.css'>";
 $customTitle = "Login";
 require_once("../../view/php/partials/_adminHeader.php");
 require_once("../../view/php/partials/_menu.php");
+//dit doen we nu hier met posts maar zou ook met js kunnen als jarno dit gebruikt voor de parsly;
 if(isset($_POST['email'])){
-
     require_once("../../controller/php/user.php");
-
     $user = new user();
-    $test = $user->login($_POST['email'],$_POST['wachtwoord']);
-    if($test){
+    $loggedsucces = $user->login($_POST['email'],$_POST['wachtwoord']);
+    if($loggedsucces){
         echo "<script>location.href='http://localhost/home/flowerpower/view/php/index.php';</script>";
     }
 
@@ -28,13 +27,8 @@ if(isset($_POST['email'])){
                 <label for="wachtwoord">Wachtwoord</label>
                 <input type="password" name="wachtwoord" class="form-control" id="wachtwoord" placeholder="******">
             </div>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Login</button>
             <small id="emailHelp" class="form-text text-muted">Heb je nog geen account? <a href="register.php">Klik hier.</a>  </small>
         </form>
     </div>
 </div>
-
-<?php
-$customScript = "";
-require_once("../../view/php/partials/_scripts.php");
-?>

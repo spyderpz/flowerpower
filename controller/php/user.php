@@ -1,5 +1,13 @@
 <?php
 require_once("../../model/php/core.php");
+if(isset($_POST['logout'])){
+    if($_POST['logout'] == true){
+        $_SESSION['loggedin'] = false;
+        $user = new user();
+        $user->logout();
+        $_POST['logout'] = false;
+    }
+}
 class user
 {
 
@@ -14,7 +22,9 @@ class user
             $passquery->execute(['password' => $wachtwoord, 'email' => $email]);
             $userres = $passquery->fetch();
             if ($userres) {
+                $_SESSION['loggedin'] = true;
                 return true;
+
             } else {
                 return false;
             }
@@ -22,17 +32,27 @@ class user
             echo false;
         }
     }
-    function register($voornaam, $achternaam, $wachtwoord, $email,$geboortedatum, $postcode, $woonplaats){
+    function register($voornaam, $achternaam, $wachtwoord,$wachtwoordcheck, $email,$geboortedatum, $postcode, $woonplaats){
         global $pdo;
-        $availabilityquery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");
-        $availabilityquery->execute(['email' => $email]);
-        $userres = $availabilityquery->fetch();
-        if ($userres) {
-            return false;
+        if($wachtwoord == $wachtwoordcheck){
+            $availabilityquery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");
+            $availabilityquery->execute(['email' => $email]);
+            $userres = $availabilityquery->fetch();
+            if ($userres) {
+                return false;
+            }else{
+                $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats)");
+                $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
+                return true;
+            }
         }else{
-            $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats)");
-            $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
-            return true;
+            return false;
         }
     }
+    function logout(){
+        $_SESSION['loggedin'] = false;
+        session_destroy();
+        session_start();
+    }
+
 }

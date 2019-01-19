@@ -7,7 +7,7 @@ require_once("../../view/php/partials/_menu.php");
 if(isset($_POST['voornaam'])){
     require_once("../../controller/php/user.php");
     $user = new user();
-    $test = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['email'],$_POST['geboortedatum'],$_POST["postcode"],$_POST['woonplaats']);
+    $test = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['wachtwoordcheck'],['email'],$_POST['geboortedatum'],$_POST["postcode"],$_POST['woonplaats']);
     if($test){
         echo "<script>location.href='http://localhost/home/flowerpower/view/php/login.php';</script>";
     }
@@ -56,12 +56,9 @@ if(isset($_POST['voornaam'])){
                 <label for="wachtwoordCheck">Nog een keer wachtwoord:</label>
                 <input type="password" name="wachtwoorcheck" class="form-control" id="wachtwoordCheck" placeholder="******">
             </div>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Registreer</button>
         </form>
     </div>
 </div>
 
-<?php
-$customScript = "";
-require_once("../../view/php/partials/_scripts.php");
-?>
+

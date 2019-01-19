@@ -90,6 +90,4 @@
 </div>
 <?php
   require_once("../../view/php/partials/_footer.php");
-  $customScript = "";
-  require_once("../../view/php/partials/_scripts.php");
 ?>
