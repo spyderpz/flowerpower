@@ -23,6 +23,7 @@ class user
             $userres = $passquery->fetch();
             if ($userres) {
                 $_SESSION['loggedin'] = true;
+                $_SESSION['role'] = $userres['RolId'];
                 return true;
 
             } else {

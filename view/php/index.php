@@ -3,6 +3,8 @@
   $customTitle = "Home";
   require_once("../../view/php/partials/_header.php");
   require_once("../../view/php/partials/_menu.php");
+  echo 'hoi';
+  echo $_SESSION['role'];
 ?>
 
 <div class="container">
