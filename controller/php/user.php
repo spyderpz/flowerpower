@@ -11,13 +11,13 @@ if(isset($_POST['logout'])){
 class user
 {
 
-    function login($email, $wachtwoord)
-    {
+    function login($email, $wachtwoord){
         global $pdo;
         $usernamequery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");
         $usernamequery->execute(['email' => $email]);
         $userres = $usernamequery->fetch();
         if ($userres) {
+            $wachtwoord = hash('sha512',$wachtwoord);
             $passquery = $pdo->prepare("SELECT * FROM personen WHERE Wachtwoord = :password AND Email = :email");
             $passquery->execute(['password' => $wachtwoord, 'email' => $email]);
             $userres = $passquery->fetch();
@@ -41,6 +41,7 @@ class user
             if ($userres) {
                 return false;
             }else{
+                $wachtwoord = hash('sha512',$wachtwoord);
                 $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats)");
                 $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
                 return true;
