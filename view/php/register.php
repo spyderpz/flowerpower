@@ -3,11 +3,11 @@ $customCss = "<link rel='stylesheet' href='../../view/css/registreer.css'>";
 $customTitle = "Registreer";
 require_once("../../view/php/partials/_adminHeader.php");
 require_once("../../view/php/partials/_menu.php");
-
+// vragen aan jarno of dit in een js file kan zoals login
 if(isset($_POST['voornaam'])){
     require_once("../../controller/php/user.php");
     $user = new user();
-    $test = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['wachtwoordcheck'],$_POST['email'],$_POST['geboortedatum'],$_POST["postcode"],$_POST['woonplaats']);
+    $test = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['wachtwoordcheck'],$_POST['email'],$_POST['geboortedatum'],$_POST["postcode"],$_POST['woonplaats'],'3');
     if($test){
         echo "<script>location.href='http://localhost/home/flowerpower/view/php/login.php';</script>";
     }

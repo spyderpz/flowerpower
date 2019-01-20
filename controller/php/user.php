@@ -33,7 +33,7 @@ class user
             echo false;
         }
     }
-    function register($voornaam, $achternaam, $wachtwoord,$wachtwoordcheck, $email,$geboortedatum, $postcode, $woonplaats){
+    function register($voornaam, $achternaam, $wachtwoord,$wachtwoordcheck, $email,$geboortedatum, $postcode, $woonplaats,$rollid){
         global $pdo;
         if($wachtwoord == $wachtwoordcheck){
             $availabilityquery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");

@@ -30,6 +30,19 @@ require_once("../../view/php/partials/_scripts.php");
 <!--           logged in check -->
           <?php
           if(isset($_SESSION['loggedin'])) {
+              if ($_SESSION['role'] == 1 ) {
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
+                   </li>";
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='addmedewerker.php'>Mederwerker toevoegen</a>
+                   </li>";
+              } elseif ($_SESSION['role'] == 2) {
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
+                   </li>";
+              } else{
+              }
               if ($_SESSION['loggedin']) {
                   echo "<li class='nav-item'>
                        <a class='nav-link logout' href='javascript:;'>Logout</a>
