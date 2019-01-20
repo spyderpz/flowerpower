@@ -2,16 +2,23 @@
 require_once("../../model/php/core.php");
 class product{
 
-    function getproducts(){
+    function getproducts()
+    {
         global $pdo;
         $productarray = [];
         $productquery = $pdo->prepare("SELECT * FROM producten");
         $productquery->execute();
-        while($product = $productquery->fetch()){
-            var_dump($product);
-
+        $i = 0;
+        while ($product = $productquery->fetch()) {
+            $productarray[$i] = $product;
+            $i++;
         }
+        return($productarray);
+    }
+    function setproduct(){
+        global $pdo;
 
     }
+
 
 }
