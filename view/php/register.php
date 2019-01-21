@@ -2,6 +2,7 @@
 $customCss = "<link rel='stylesheet' href='../../view/css/registreer.css'>";
 $customTitle = "Registreer";
 require_once("../../view/php/partials/_adminHeader.php");
+$customScripts = "";
 require_once("../../view/php/partials/_menu.php");
 // vragen aan jarno of dit in een js file kan zoals login
 if(isset($_POST['voornaam'])){
@@ -60,5 +61,3 @@ if(isset($_POST['voornaam'])){
         </form>
     </div>
 </div>
-
-

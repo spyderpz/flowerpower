@@ -2,6 +2,7 @@
 $customCss = "<link rel='stylesheet' href='../../view/css/login.css'>";
 $customTitle = "Login";
 require_once("../../view/php/partials/_adminHeader.php");
+$customScripts = "";
 require_once("../../view/php/partials/_menu.php");
 //dit doen we nu hier met posts maar zou ook met js kunnen als jarno dit gebruikt voor de parsly;
 if(isset($_POST['email'])){
@@ -9,7 +10,7 @@ if(isset($_POST['email'])){
     $user = new user();
     $loggedsucces = $user->login($_POST['email'],$_POST['wachtwoord']);
     if($loggedsucces){
-        echo "<script>location.href='http://localhost/home/flowerpower/view/php/index.php';</script>";
+        echo "<script>location.href='../../view/php/index.php';</script>";
     }
 
 }

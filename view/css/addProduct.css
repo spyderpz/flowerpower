@@ -1,0 +1,24 @@
+.border-box{
+  border: 2px solid #DCDCDC;
+  padding: 4%;
+  border-radius:1%;
+  -webkit-box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
+  -moz-box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
+  box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
+}
+
+.title-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  height: 95vh;
+}
+
+.row{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}

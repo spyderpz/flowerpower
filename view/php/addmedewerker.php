@@ -1,14 +1,22 @@
 <?php
-var_dump($_POST);
+$customCss = "<link rel='stylesheet' href='../../view/css/addMedewerker.css'>";
+$customTitle = "Medewerker toevoegen";
+require_once("../../view/php/partials/_adminHeader.php");
+$customScripts = "";
+require_once("../../view/php/partials/_menu.php");
+
+?>
+
+<?php
 require_once("../../model/php/core.php");
 if(isset($_SESSION['role'])){
     if($_SESSION['role'] == 1 || $_SESSION['role'] == 2){
 echo'
         <div class="row login-wrapper">
-        <div class="img-div col-9">
-        </div>
-        <div class="form-div col-3">
-            <form class="animated delay-05s fadeInUp" value="addmedewerker" action="?" method="post">
+        <h2 class="title-page col-12">Medewerker toevoegen</h2>
+        <div class="form-div col-4">
+        <div class="border-box">
+            <form class="" value="addmedewerker" action="?" method="post">
                 <div class="form-group">
                     <label for="voornaam">Voornaam:</label>
                     <input type="text" name="voornaam" class="form-control" id="voornaam" aria-describedby="emailHelp" placeholder="harry">
@@ -34,14 +42,14 @@ echo'
                     <label for="woonplaats">Woonplaats:</label>
                     <input type="text" name="woonplaats" class="form-control" id="woonplaats" placeholder="Boerengat">
                 </div>
-                </div>
+
                 <div class="form-group">
                     <label for="rol">Functie:</label>
                      <select name="rolId">
                       <option value="3">Klant</option>
                       <option value="2">Medewerker</option>
                       <option value="1">Admin</option>
-                    </select> 
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="wachtwoord">Wachtwoord:</label>
@@ -53,7 +61,9 @@ echo'
                     <input type="password" name="wachtwoordcheck" class="form-control" id="wachtwoordCheck" placeholder="******">
                 </div>
                 <button type="submit" class="btn btn-secondary">Registreer</button>
+                </div>
             </form>
+            </div>
         </div>
         </div>
 ';
@@ -65,4 +75,3 @@ echo'
     echo 'YOU SHALL NOT PASS';
 }
 ?>
-

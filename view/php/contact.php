@@ -2,6 +2,7 @@
   $customCss = "<link rel='stylesheet' href='../../view/css/contact.css'>";
   $customTitle = "Contact";
   require_once("../../view/php/partials/_header.php");
+  $customScripts = "";
   require_once("../../view/php/partials/_menu.php");
 ?>
 
