@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 jan 2019 om 11:33
+-- Gegenereerd op: 21 jan 2019 om 08:10
 -- Serverversie: 5.7.14
 -- PHP-versie: 5.6.25
 
@@ -68,7 +68,7 @@ CREATE TABLE `personen` (
 
 INSERT INTO `personen` (`id`, `Voornaam`, `Achternaam`, `Wachtwoord`, `Email`, `Geboortedatum`, `Postcode`, `Woonplaats`, `RolId`) VALUES
 (3, 'test', 'test', 'test', 'test@test.com', '2000-05-16', '7887EZ', 'Erica', 3),
-(4, 'henk', 'henk', 'c1b13157df74145d5213c8f4b38d2962b6c4083613c79204ec793e786b21c95885e839a6c0181735692fcb9902066dd486ce4956d97b883e4eb18ed60ba66301', 'henk@henk.com', '2000-05-16', '7887EZ', 'Erica', 3);
+(4, 'henk', 'henk', 'c1b13157df74145d5213c8f4b38d2962b6c4083613c79204ec793e786b21c95885e839a6c0181735692fcb9902066dd486ce4956d97b883e4eb18ed60ba66301', 'henk@henk.com', '2000-05-16', '7887EZ', 'Erica', 1);
 
 -- --------------------------------------------------------
 
