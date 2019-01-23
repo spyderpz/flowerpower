@@ -1,5 +1,5 @@
 <?php
 
-class medewerker extends user{
+class medewerker extends gebruiker {
 
 }

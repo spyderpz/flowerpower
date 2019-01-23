@@ -65,8 +65,7 @@ echo'
             </form>
             </div>
         </div>
-        </div>
-';
+        </div>';
 
     }else{
         echo 'you shall not pass';

@@ -31,6 +31,7 @@ require_once("../../view/php/partials/_scripts.php");
           <?php
           if(isset($_SESSION['loggedin'])) {
               if ($_SESSION['role'] == 1 ) {
+                  $user = new admin();
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
                    </li>";
@@ -38,18 +39,13 @@ require_once("../../view/php/partials/_scripts.php");
                        <a class='nav-link' href='addmedewerker.php'>Mederwerker toevoegen</a>
                    </li>";
               } elseif ($_SESSION['role'] == 2) {
+                  $user = new medewerker();
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
                    </li>";
               } else{
-              }
-              if ($_SESSION['loggedin']) {
                   echo "<li class='nav-item'>
                        <a class='nav-link logout' href='javascript:;'>Logout</a>
-                   </li>";
-              } else {
-                  echo "<li class='nav-item'>
-                       <a class='nav-link' href='login.php'>Login</a>
                    </li>";
               }
           }else{
