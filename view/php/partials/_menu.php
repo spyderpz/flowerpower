@@ -1,7 +1,10 @@
 <?php
 require_once("../../model/php/core.php");
 require_once("../../view/php/partials/_scripts.php");
-
+require_once("../../controller/php/user.php");
+require_once("../../controller/php/gebruiker.php");
+require_once("../../controller/php/medewerker.php");
+require_once("../../controller/php/admin.php");
 ?>
 <script src="../../controller/js/logout.js"></script>
 
@@ -44,8 +47,14 @@ require_once("../../view/php/partials/_scripts.php");
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
                    </li>";
               } else{
+              }
+              if ($_SESSION['loggedin']) {
                   echo "<li class='nav-item'>
                        <a class='nav-link logout' href='javascript:;'>Logout</a>
+                   </li>";
+              } else {
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='login.php'>Login</a>
                    </li>";
               }
           }else{

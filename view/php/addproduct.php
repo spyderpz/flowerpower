@@ -24,7 +24,7 @@ if(isset($_SESSION['role'])){
                     <input id='addproducttitle' class='form-control'>
                   </div>
                   <label for='addproductimage'>Afbeelding:</label>
-                  <div id='fileInput' class='dropzone'>
+                  <div id='fileInput' class='dropzone' url='../../model/img/bloemen'>
                     <div class='fallback'>
                       <input name='file' type='file' multiple />
                     </div>

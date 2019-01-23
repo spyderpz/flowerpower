@@ -15,9 +15,18 @@ class product{
         }
         return($productarray);
     }
-    function setproduct(){
+    function setproduct($productnaam,$omschrijving,$image,$prijs){
         global $pdo;
 
+        $productnamequery = $pdo->prepare("SELECT * FROM producten WHERE Productnaam = :productnaam");
+        $productnamequery->execute(["productnaam" => $productnaam]);
+        if($productnamequery->fetch()){
+            $setproductquery = $pdo->prepare("INSERT INTO producten(Productnaam,Omschrijving,Image,Prijs)VALUES (:productnaam,:omschrijving,:image,:prijs)");
+            $succestest = $setproductquery->execute(['productnaam' => $productnaam, 'omschrijving' => $omschrijving, 'image' => $image, 'prijs' => $prijs]);
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
