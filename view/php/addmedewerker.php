@@ -10,8 +10,38 @@ require_once("../../view/php/partials/_menu.php");
 <?php
 require_once("../../model/php/core.php");
 if(isset($_SESSION['role'])){
-    if($_SESSION['role'] == 1 || $_SESSION['role'] == 2){
-echo'
+    if($_SESSION['role'] == 1){
+        $admin = new admin();
+        $userarr = $admin->getusers();
+        echo '<div class="border-box">
+                    <table class="usertable">
+                 <tr>
+                    <th>Opties</th>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Email</th>
+                    <th>Geboortedatum</th>
+                    <th>Postcode</th>
+                    <th>Woonplaats</th>
+                    <th>Rolid</th>
+                 </tr>
+';
+
+        foreach($userarr as $user){
+            echo '<tr>
+                     <th><button>Wijzig</button><button>Verwijder</button></th>
+                     <th>'.$user['Voornaam'].'</th>
+                     <th>'.$user['Achternaam'].'</th>
+                     <th>'.$user['Email'].'</th>
+                     <th>'.$user['Geboortedatum'].'</th>
+                     <th>'.$user['Postcode'].'</th>
+                     <th>'.$user['Woonplaats'].'</th>
+                     <th>'.$user['RolId'].'</th>                   
+
+';
+        }
+        echo '</table></div>';
+        echo'
         <div class="row login-wrapper">
         <h2 class="title-page col-12">Medewerker toevoegen</h2>
         <div class="form-div col-4">

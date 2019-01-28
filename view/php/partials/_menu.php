@@ -3,8 +3,7 @@ require_once("../../model/php/core.php");
 require_once("../../view/php/partials/_scripts.php");
 require_once("../../controller/php/user.php");
 require_once("../../controller/php/gebruiker.php");
-require_once("../../controller/php/medewerker.php");
-require_once("../../controller/php/admin.php");
+
 ?>
 <script src="../../controller/js/logout.js"></script>
 
@@ -34,17 +33,27 @@ require_once("../../controller/php/admin.php");
           <?php
           if(isset($_SESSION['loggedin'])) {
               if ($_SESSION['role'] == 1 ) {
+                  require_once("../../controller/php/medewerker.php");
+                  require_once("../../controller/php/admin.php");
                   $user = new admin();
+
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
                    </li>";
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addmedewerker.php'>Mederwerker toevoegen</a>
                    </li>";
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='bestellingen.php'>Bestellingen</a>
+                   </li>";
               } elseif ($_SESSION['role'] == 2) {
+                  require_once("../../controller/php/medewerker.php");
                   $user = new medewerker();
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
+                   </li>";
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='bestellingen.php'>Bestellingen</a>
                    </li>";
               } else{
               }
