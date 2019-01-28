@@ -1,4 +1,5 @@
 <?php
+var_dump($_POST);
 $customCss = "<link rel='stylesheet' href='../../view/css/addProduct.css'> <link rel='stylesheet' href='../../view/plugins/dropzone/dropzone.css'>";
 $customTitle = "Producten toevoegen";
 require_once("../../view/php/partials/_adminHeader.php");
@@ -18,21 +19,23 @@ if(isset($_SESSION['role'])){
             <div class='col-6 product-wrapper'>
                 <div class='border-box'>
                 <div class='form-group'>
-                <form action=''>
+                <form action='../../controller/php/product.php' method='post' enctype='multipart/form-data'>
                   <div class='form-group'>
                     <label for='addproducttitle'>Producttitle:</label>
-                    <input id='addproducttitle' class='form-control'>
+                    <input id='addproducttitle' name='producttitle' class='form-control'>
                   </div>
                   <label for='addproductimage'>Afbeelding:</label>
-                  <div id='fileInput' class='dropzone' url='../../model/img/bloemen'>
-                    <div class='fallback'>
-                      <input name='file' type='file' multiple />
-                    </div>
-                  </div>
+  
+                      <input name='picture' type='file' />
+  
                   <br>
                   <div class='form-group'>
                     <label for='addproductdesc'>Productbeshrijving:</label>
-                    <textarea id='addproductdesc' class='form-control' rows='1' cols='30'></textarea>
+                    <textarea id='addproductdesc' name='productbeschrijving' class='form-control' rows='1' cols='30'></textarea>
+                  </div>
+                  <div class='form-group'>
+                    <label for='addproductprijs'>Prijs:</label>
+                    <textarea id='addproductprijs' name='productprijs' class='form-control' rows='1' cols='1'></textarea>
                   </div>
                   <button type='submit' class='btn btn-secondary'>Toevoegen</button>
                   </form>
