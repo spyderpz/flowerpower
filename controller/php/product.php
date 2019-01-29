@@ -2,8 +2,13 @@
 require_once("../../model/php/core.php");
 if(isset($_POST['producttitle'])){
     $product = new product();
-    $product->setproduct($_POST['producttitle'],$_POST['productbeschrijving'],' 	../../model/img/bloemen/'.$_FILES['picture']['name'],$_POST['productprijs']);
-    echo "<script>location.href='http://localhost/home/flowerpower/view/php/index.php';</script>";
+    $message = $product->setproduct($_POST['producttitle'],$_POST['productbeschrijving'],' 	../../model/img/bloemen/'.$_FILES['picture']['name'],$_POST['productprijs']);
+    if($message){
+        echo "<script>location.href='http://localhost/home/flowerpower/view/php/index.php';</script>";
+
+    }else{
+        echo $message;
+    }
 }
 
 class product{

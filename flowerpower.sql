@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 21 jan 2019 om 08:10
+-- Gegenereerd op: 29 jan 2019 om 08:30
 -- Serverversie: 5.7.14
 -- PHP-versie: 5.6.25
 
@@ -68,7 +68,9 @@ CREATE TABLE `personen` (
 
 INSERT INTO `personen` (`id`, `Voornaam`, `Achternaam`, `Wachtwoord`, `Email`, `Geboortedatum`, `Postcode`, `Woonplaats`, `RolId`) VALUES
 (3, 'test', 'test', 'test', 'test@test.com', '2000-05-16', '7887EZ', 'Erica', 3),
-(4, 'henk', 'henk', 'c1b13157df74145d5213c8f4b38d2962b6c4083613c79204ec793e786b21c95885e839a6c0181735692fcb9902066dd486ce4956d97b883e4eb18ed60ba66301', 'henk@henk.com', '2000-05-16', '7887EZ', 'Erica', 1);
+(4, 'henk', 'henk', 'c1b13157df74145d5213c8f4b38d2962b6c4083613c79204ec793e786b21c95885e839a6c0181735692fcb9902066dd486ce4956d97b883e4eb18ed60ba66301', 'henk@henk.com', '2000-05-16', '7887EZ', 'Erica', 1),
+(5, 'test', 'test', 'ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff', 'testing@test.com', '2011-08-19', '7887EZ', 'Erica', 3),
+(6, 'hen', 'k', 'ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff', 'henkhenk@henk.com', '2000-05-16', '7887EZ', 'Erica', 3);
 
 -- --------------------------------------------------------
 
@@ -89,7 +91,7 @@ CREATE TABLE `producten` (
 --
 
 INSERT INTO `producten` (`id`, `Productnaam`, `Omschrijving`, `Image`, `Prijs`) VALUES
-(1, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
+(1, 'Roos', 'Tering grote haai met een buik en een lorem ipsum en valt deze tekst nu niet buiten de div en verkracht dit alles want dan moeten we het even afsneiden voor het plakken en alleen laten zien bij hover    Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren \'60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.', '../../model/img/bloemen/roos', '6'),
 (2, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
 (3, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
 (4, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
@@ -100,7 +102,12 @@ INSERT INTO `producten` (`id`, `Productnaam`, `Omschrijving`, `Image`, `Prijs`) 
 (9, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
 (10, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
 (11, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
-(12, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6');
+(12, 'Roos', 'prikkelig ding met interresante geur', '../../model/img/bloemen/roos', '6'),
+(17, 'fsdf', 'fdafads', ' 	../../model/img/bloemen/flowerpower-logo.png', '12321'),
+(18, 'testsfewf', 'fsdfsd', ' 	../../model/img/bloemen/Dancers Theo van doesburg 254hx83b.jpg', '20'),
+(19, 'fdsfds', 'fsdf', ' 	../../model/img/bloemen/WhatsApp Image 2018-06-26 at 14.31.37(3).jpeg', '15'),
+(20, 'fsdfs', 'fdsfds', ' 	../../model/img/bloemen/zonnebloem (2).jpg', '152'),
+(21, 'tesdfs', 'fsdf', ' 	../../model/img/bloemen/Dancers Theo van doesburg 254hx83b.jpg', '15');
 
 -- --------------------------------------------------------
 
@@ -179,12 +186,12 @@ ALTER TABLE `bestellingproducten`
 -- AUTO_INCREMENT voor een tabel `personen`
 --
 ALTER TABLE `personen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT voor een tabel `producten`
 --
 ALTER TABLE `producten`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT voor een tabel `rollen`
 --
