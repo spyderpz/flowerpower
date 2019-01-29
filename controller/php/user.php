@@ -1,13 +1,22 @@
 <?php
 require_once("../../model/php/core.php");
+$user = new user();
 if(isset($_POST['logout'])){
     if($_POST['logout'] == true){
         $_SESSION['loggedin'] = false;
-        $user = new user();
         $user->logout();
         $_POST['logout'] = false;
     }
 }
+
+if(isset($_POST['register'])){
+    if($_POST['register']){
+        $res = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['wachtwoordcheck'],$_POST['email'],$_POST['geboortedatum'],$_POST['postcode'],$_POST['woonplaats'],$_POST['functie']);
+        echo $res;
+        $_POST['register'] = false;
+    }
+}
+
 class user
 {
 
@@ -33,7 +42,7 @@ class user
             echo false;
         }
     }
-    function register($voornaam, $achternaam, $wachtwoord,$wachtwoordcheck, $email,$geboortedatum, $postcode, $woonplaats,$rollid){
+    function register($voornaam, $achternaam, $wachtwoord,$wachtwoordcheck, $email,$geboortedatum, $postcode, $woonplaats,$rolid){
         global $pdo;
         if($wachtwoord == $wachtwoordcheck){
             $availabilityquery = $pdo->prepare("SELECT Email FROM personen WHERE Email = :email");
@@ -43,8 +52,8 @@ class user
                 return false;
             }else{
                 $wachtwoord = hash('sha512',$wachtwoord);
-                $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats)");
-                $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats]);
+                $newpersquery = $pdo->prepare("INSERT INTO personen(Voornaam,Achternaam,Wachtwoord,Email,Geboortedatum,Postcode,Woonplaats,RolId)VALUES (:Voornaam,:Achternaam,:Wachtwoord,:Email,:geboortedatum,:Postcode,:Woonplaats,:RolId)");
+                $correct = $newpersquery->execute(['Voornaam' => $voornaam, 'Achternaam' => $achternaam, 'Wachtwoord' => $wachtwoord, 'Email' => $email, 'geboortedatum'=>$geboortedatum, 'Postcode' => $postcode, 'Woonplaats' => $woonplaats,'RolId' => $rolid]);
                 return true;
             }
         }else{

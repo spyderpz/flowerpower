@@ -47,7 +47,7 @@ if(isset($_SESSION['role'])){
         <h2 class="title-page col-12">Medewerker toevoegen</h2>
         <div class="form-div col-4">
         <div class="border-box">
-            <form class="" value="addmedewerker" action="?" method="post">
+            <form class="" value="addmedewerker" action="javascript::" method="post">
                 <div class="form-group">
                     <label for="voornaam">Voornaam:</label>
                     <input type="text" name="voornaam" class="form-control" id="voornaam" aria-describedby="emailHelp" placeholder="harry">
@@ -91,7 +91,9 @@ if(isset($_SESSION['role'])){
                     <label for="wachtwoordCheck">Nog een keer wachtwoord:</label>
                     <input type="password" name="wachtwoordcheck" class="form-control" id="wachtwoordCheck" placeholder="******">
                 </div>
-                <button type="submit" class="btn btn-secondary">Registreer</button>
+                <button class="btn btn-secondary registermedewerker">Registreer</button>
+                <button class="btn btn-secondary updatemedewerker">Update</button>
+
                 </div>
             </form>
             </div>

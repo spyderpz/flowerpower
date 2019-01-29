@@ -11,6 +11,9 @@ if(isset($_POST['voornaam'])){
     $test = $user->register($_POST['voornaam'],$_POST['achternaam'],$_POST['wachtwoord'],$_POST['wachtwoordcheck'],$_POST['email'],$_POST['geboortedatum'],$_POST["postcode"],$_POST['woonplaats'],'3');
     if($test){
         echo "<script>location.href='http://localhost/home/flowerpower/view/php/login.php';</script>";
+    }else{
+        echo "<script>alert('email already exists');</script>";
+
     }
 
 }
