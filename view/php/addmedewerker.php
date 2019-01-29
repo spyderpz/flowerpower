@@ -2,7 +2,8 @@
 $customCss = "<link rel='stylesheet' href='../../view/css/addMedewerker.css'>";
 $customTitle = "Medewerker toevoegen";
 require_once("../../view/php/partials/_adminHeader.php");
-$customScripts = "";
+
+$customScripts = "<script src='../../controller/js/addmedewerker.js' charset='utf-8'></script>";
 require_once("../../view/php/partials/_menu.php");
 
 ?>
@@ -29,14 +30,14 @@ if(isset($_SESSION['role'])){
 
         foreach($userarr as $user){
             echo '<tr>
-                     <th><button>Wijzig</button><button>Verwijder</button></th>
-                     <th>'.$user['Voornaam'].'</th>
-                     <th>'.$user['Achternaam'].'</th>
-                     <th>'.$user['Email'].'</th>
-                     <th>'.$user['Geboortedatum'].'</th>
-                     <th>'.$user['Postcode'].'</th>
-                     <th>'.$user['Woonplaats'].'</th>
-                     <th>'.$user['RolId'].'</th>                   
+                     <th><button class="userchange" id="'.$user['id'].'">Wijzig</button><button class="userdelete" id="'.$user['id'].'">Verwijder</button></th>
+                     <th class="'.$user['id'].'voornaam">'.$user['Voornaam'].'</th>
+                     <th class="'.$user['id'].'achternaam">'.$user['Achternaam'].'</th>
+                     <th class="'.$user['id'].'email">'.$user['Email'].'</th>
+                     <th class="'.$user['id'].'geboortedatum">'.$user['Geboortedatum'].'</th>
+                     <th class="'.$user['id'].'postcode">'.$user['Postcode'].'</th>
+                     <th class="'.$user['id'].'woonplaats">'.$user['Woonplaats'].'</th>
+                     <th class="'.$user['id'].'rolid">'.$user['RolId'].'</th>                   
 
 ';
         }
@@ -75,18 +76,18 @@ if(isset($_SESSION['role'])){
 
                 <div class="form-group">
                     <label for="rol">Functie:</label>
-                     <select name="rolId">
+                     <select name="rolId" id="rolid">
                       <option value="3">Klant</option>
                       <option value="2">Medewerker</option>
                       <option value="1">Admin</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group wachtwoordarea" >
                     <label for="wachtwoord">Wachtwoord:</label>
                     <input type="password" name="wachtwoord" class="form-control" id="wachtwoord" placeholder="******">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group wachtwoordcheckarea">
                     <label for="wachtwoordCheck">Nog een keer wachtwoord:</label>
                     <input type="password" name="wachtwoordcheck" class="form-control" id="wachtwoordCheck" placeholder="******">
                 </div>
