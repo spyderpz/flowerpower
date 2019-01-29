@@ -14,4 +14,57 @@
   -moz-box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
   box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
   margin-bottom: 4%;
+  cursor: pointer;
+}
+
+.panel-footer{
+  height: 16vh;
+  display: -webkit-box;
+-webkit-line-clamp: 6;
+-webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel-body img{
+  height: 20vh;
+  object-fit: cover;
+}
+
+.single-product{
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.single-wrapper{
+  width: 80vw;
+  height: 80vh;
+  background-color: yellow;
+}
+
+.image{
+  width: 20%;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
