@@ -1,5 +1,4 @@
 <?php
-var_dump($_POST);
 $customCss = "<link rel='stylesheet' href='../../view/css/addProduct.css'> <link rel='stylesheet' href='../../view/plugins/dropzone/dropzone.css'>";
 $customTitle = "Producten toevoegen";
 require_once("../../view/php/partials/_adminHeader.php");
@@ -35,7 +34,7 @@ if(isset($_SESSION['role'])){
                   </div>
                   <div class='form-group'>
                     <label for='addproductprijs'>Prijs:</label>
-                    <textarea id='addproductprijs' name='productprijs' class='form-control' rows='1' cols='1'></textarea>
+                    <input type='number' id='addproductprijs' name='productprijs' class='form-control' min='1' max='1000'>
                   </div>
                   <button type='submit' class='btn btn-secondary'>Toevoegen</button>
                   </form>

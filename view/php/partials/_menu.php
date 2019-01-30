@@ -27,7 +27,7 @@ require_once("../../controller/php/gebruiker.php");
         <span class="navbar-text">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Winkelwagen</a>
+          <a class="nav-link" href="winkelwagen.php">Winkelwagen</a>
         </li>
 <!--           logged in check -->
           <?php

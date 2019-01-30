@@ -32,4 +32,14 @@ class admin extends medewerker{
         }
 
     }
+    function delete($persid){
+        global $pdo;
+
+        $deletequery = $pdo->prepare("DELETE FROM personen WHERE id=:persid");
+        $deletequery->execute(['persid' => $persid]);
+        echo "Record deleted successfully";
+    }
+
+
+
 }

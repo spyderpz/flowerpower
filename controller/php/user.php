@@ -33,6 +33,7 @@ class user
             if ($userres) {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['role'] = $userres['RolId'];
+                $_SESSION['userid'] = $userres['id'];
                 return true;
 
             } else {
@@ -65,5 +66,12 @@ class user
         session_destroy();
         session_start();
     }
-
+    function addtoshoppingcart($item_id,$amount){
+        if(!isset($_SESSION['shoppingcart'])){
+            $_SESSION['shoppingcart'] = array();
+        }
+        for($i=0;$i<=$amount;$i++){
+            array_push($_SESSION['shoppingcart'],$item_id);
+        }
+    }
 }

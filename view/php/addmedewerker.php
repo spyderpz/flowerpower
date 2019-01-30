@@ -93,6 +93,7 @@ if(isset($_SESSION['role'])){
                 </div>
                 <button class="btn btn-secondary registermedewerker">Registreer</button>
                 <button class="btn btn-secondary updatemedewerker">Update</button>
+                <button class="btn btn-secondary deletemedewerker">Delete</button>
 
                 </div>
             </form>

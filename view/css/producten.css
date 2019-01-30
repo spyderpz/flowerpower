@@ -80,7 +80,9 @@
   margin-top: 10%;
   width: 90%;
 }
-
+.productprijs{
+  float:right;
+}
 #overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
