@@ -20,7 +20,7 @@
         echo "
                 <div class='col-sm-4 product-wrapper' id='".$product['id']."'>
                     <div class='panel panel-primary'>
-                        <div class='panel-heading'>".$product['Productnaam'].'<div class="productprijs">Prijs:'.$product['Prijs']."</div></div>
+                        <div class='panel-heading'>".$product['Productnaam'].'<div class="productprijs">Prijs:€ '.$product['Prijs']."</div></div>
                         <div class='panel-body'><img src='".$product['Image']."' class='img-responsive' style='width:100%' alt='Image' onerror='imgError(this);'></div>
                         <hr>
                         <div class='panel-footer '>".$product['Omschrijving']."</div>
