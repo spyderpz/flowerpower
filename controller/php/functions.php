@@ -28,6 +28,19 @@ if(isset($_POST['cancelorder'])){
         $_POST['cancelorder'] = false;
     }
 }
+if(isset($_POST['bestel'])){
+    if($_POST['bestel']){
+        require_once("../../controller/php/winkelwagen.php");
+        $cart = new winkelwagen();
+        $res = $cart->confirmorder($_POST['ophaaldatum']);
+        if($res){
+            echo true;
+        }else{
+            echo false;
+        }
+        $_POST['bestel'] = false;
+    }
+}
 if(isset($_POST['addtocart'])){
     if($_POST['addtocart']){
         require_once("../../controller/php/user.php");

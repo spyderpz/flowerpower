@@ -19,7 +19,21 @@ $(document).ready( function(){
         var today = new Date();
         today.setHours(0,0,0,0);
         if(orderdate > today) {
+            orderdate = orderdate.toISOString().slice(0, 19).replace('T', ' ').split(' ')[0];
+            $.ajax({
+                type: "post",
+                url: "../../controller/php/functions.php",
+                data: {bestel: true, ophaaldatum: orderdate},
+                success: function (data) {
+                    if(data){
+                        location.href = 'http://localhost/home/flowerpower/view/php/bestellingen.php';
+                        console.log(data);
+                    }else{
+                        console.log(data);
+                    }
 
+                }
+            });
         }else{
             alert('please select a date after today');
         }
