@@ -15,15 +15,23 @@ if(isset($_POST['delete'])){
         require_once("../../controller/php/user.php");
         require_once("../../controller/php/medewerker.php");
         require_once("../../controller/php/admin.php");
-        $admin = new admin;
+        $admin = new admin();
         $res = $admin->delete($_POST['userid']);
         $_POST['delete'] = false;
+    }
+}
+if(isset($_POST['cancelorder'])){
+    if($_POST['cancelorder']){
+        require_once("../../controller/php/winkelwagen.php");
+        $cart = new winkelwagen();
+        $res = $cart->cancelorder($_POST['itemid']);
+        $_POST['cancelorder'] = false;
     }
 }
 if(isset($_POST['addtocart'])){
     if($_POST['addtocart']){
         require_once("../../controller/php/user.php");
-        $user = new user;
+        $user = new user();
         $res = $user->addtoshoppingcart($_POST['prodid'],$_POST['amount']);
         var_dump($res);
         $_POST['addtocart'] = false;

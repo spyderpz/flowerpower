@@ -13,4 +13,11 @@
     box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
 }
 .carttitle{
+    float:left;
+}
+.prodamount{
+
+}
+.deleteprod{
+    height:30px;
 }
