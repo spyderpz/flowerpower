@@ -13,4 +13,15 @@ $(document).ready( function(){
             });
         }
     });
+    $(".bestelbtn").on('click', function(){
+        var orderdate = $("#orderdate").val();
+        orderdate =new Date(orderdate);
+        var today = new Date();
+        today.setHours(0,0,0,0);
+        if(orderdate > today) {
+
+        }else{
+            alert('please select a date after today');
+        }
+    });
 });

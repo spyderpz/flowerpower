@@ -9,7 +9,7 @@ require_once("../../controller/php/winkelwagen.php");
 $winkelwagen = new winkelwagen();
 $cartprods = $winkelwagen->getshoppingcart();
 if($cartprods == false){
-
+    echo 'je winkelwagen is leeg';
 }else{
     foreach ($cartprods as $prod){
         $product = explode(",", $prod);
@@ -20,6 +20,21 @@ if($cartprods == false){
                    </div>";
     }
 }
-
-
 ?>
+<form class="animated delay-05s fadeInUp" value="Bestel" action="javascript::" method="post">
+    <div class="form-group">
+        <label for="orderdate">Ophaaldatum:</label>
+        <input type="date"  class="form-control" id="orderdate">
+    </div>
+    <div class="form-group">
+        <label for="locatie">Locatie</label>
+        <select name="location" id="orderlocation">
+            <option value="karspellaan">Karspellaan 21</option>
+            <option value="flevostraat">Flevostraat 95</option>
+            <option value="snavelkavel">Snavelkavel 34</option>
+            <option value="berenspel">Berenspel 98</option>
+        </select>
+
+    </div>
+    <button type="submit" class="btn btn-secondary bestelbtn">Bestel</button>
+</form>
