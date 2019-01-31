@@ -70,8 +70,7 @@ class user
         if(!isset($_SESSION['shoppingcart'])){
             $_SESSION['shoppingcart'] = array();
         }
-        for($i=0;$i<=$amount;$i++){
-            array_push($_SESSION['shoppingcart'],$item_id);
-        }
+        array_push($_SESSION['shoppingcart'],''.$item_id.','.$amount);
+
     }
 }

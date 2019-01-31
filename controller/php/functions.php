@@ -25,6 +25,7 @@ if(isset($_POST['addtocart'])){
         require_once("../../controller/php/user.php");
         $user = new user;
         $res = $user->addtoshoppingcart($_POST['prodid'],$_POST['amount']);
+        var_dump($res);
         $_POST['addtocart'] = false;
     }
 }
