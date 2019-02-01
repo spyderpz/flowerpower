@@ -6,7 +6,7 @@ require('../../view/plugins/PDF/fpdf.php');
 class PDF extends FPDF
 {
 // Page header
-    function Header($bestelnmr){
+    function Header(){
         // Logo
         $this->Image('../../model/img/logo/logo.png',10,6,30);
         // Arial bold 15
@@ -18,7 +18,7 @@ class PDF extends FPDF
         $this->Cell(80);
         $this->SetFont('Arial','',12);
 
-        $this->Cell(-30,10,'Factuur-nummer'.$_POST['bestelnmr'],0,0,'C');
+        $this->Cell(-30,10,'Factuur-nummer',0,0,'C');
 
         // Line break
         $this->Ln(20);
