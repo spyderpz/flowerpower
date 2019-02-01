@@ -39,7 +39,7 @@ if($cartprods == false){
         </select>
 
     </div>
-    <button type="submit" class="btn btn-secondary bestelbtn">Bestel</button>
+    <button type="submit" class="btn btn-secondary bestelbtn" style="margin-bottom: 3%;">Bestel</button>
 </form>
 
 </div>
