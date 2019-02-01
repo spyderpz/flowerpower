@@ -61,7 +61,7 @@ if(isset($_POST['getbestelling'])){
         require_once("../../controller/php/bestellingen.php");
         $bestelling = new bestellingen();
         if(isset($_SESSION['userid'])){
-            $res = $bestelling->getbestellingen($_POST['prodid'],$_POST['amount']);
+            $res = $bestelling->getbestellingen($_SESSION['role'],false);
             echo true;
         }else{
             echo false;
@@ -70,4 +70,45 @@ if(isset($_POST['getbestelling'])){
         $_POST['getbestelling'] = false;
 
     }
+}
+if(isset($_POST['allorder'])){
+    if($_POST['allorder']){
+        require_once("../../controller/php/bestellingen.php");
+        $bestelling = new bestellingen();
+        if(isset($_SESSION['userid'])){
+            $res = $bestelling->getbestellingen($_SESSION['role'],true);
+            echo true;
+        }else{
+            echo false;
+        }
+
+        $_POST['allorder'] = false;
+
+    }
+}
+if(isset($_POST['bestellingmade'])){
+    if($_POST['bestellingmade']){
+        bestellingstatus();
+        $_POST['bestellingmade'] = false;
+
+    }
+}
+if(isset($_POST['bestellingdone'])){
+    if($_POST['bestellingdone']){
+        bestellingstatus();
+        $_POST['bestellingdone'] = false;
+    }
+}
+function bestellingstatus(){
+    require_once("../../controller/php/user.php");
+    require_once("../../controller/php/medewerker.php");
+    $medewerker = new medewerker();
+    if(isset($_SESSION['userid'])){
+        $res = $medewerker->SetOrderStatus($_SESSION['userid'],$_POST['orderid'],$_POST['status']);
+        echo true;
+    }else{
+        echo false;
+    }
+
+
 }

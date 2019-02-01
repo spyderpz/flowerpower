@@ -21,6 +21,13 @@
     text-align: right;
     right:0;
 }
+.bestellingmade{
+    height: 12%;
+    width:9%;
+    position: relative;
+    top: 42%;
+    left: 85%;
+}
 .bestellingdone{
     height: 12%;
     width:9%;

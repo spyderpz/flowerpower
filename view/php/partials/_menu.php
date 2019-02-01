@@ -1,7 +1,6 @@
 <?php
 require_once("../../view/php/partials/_scripts.php");
 require_once("../../controller/php/user.php");
-require_once("../../controller/php/gebruiker.php");
 //if session isnt started do this
 if(session_id() == '' || !isset($_SESSION)) {
     session_start();
@@ -25,6 +24,9 @@ if(session_id() == '' || !isset($_SESSION)) {
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../../controller/php/factuur.php">Temptest</a>
             </li>
         </ul>
         <span class="navbar-text">
