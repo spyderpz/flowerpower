@@ -29,7 +29,7 @@ $(document).ready( function(){
                 data: {bestel: true, ophaaldatum: orderdate,ophaallocatie:ophaallocatie,totprice: totprijs},
                 success: function (data) {
                     if(data){
-                        location.href = 'http://localhost/home/flowerpower/view/php/bestellingen.php';
+                        location.href = '../../view/php/bestellingen.php';
                     }else{
 
                     }
