@@ -11,7 +11,7 @@ class winkelwagen{
         global $pdo;
         if(isset($_SESSION['shoppingcart'])) {
             $persid = $_SESSION['userid'];
-            $bestellingquery = $pdo->prepare("INSERT INTO bestellingen(PersoonId,Ophaaldatum,OphaalLocatie,Totaalprijs)VALUES (:persid,:ophaaldatum,:OphaalLocatie,:totprice)");
+            $bestellingquery = $pdo->prepare("INSERT INTO bestellingen(PersoonId,Ophaaldatum,OphaalLocatie,Totaalprijs,madeBy)VALUES (:persid,:ophaaldatum,:OphaalLocatie,:totprice,0)");
             $succes = $bestellingquery->execute(['persid' => $persid, 'ophaaldatum' => $ophaaldatum,'OphaalLocatie' =>$ophaallocatie, 'totprice' => $_SESSION['totprijs']]);
             $orderid = $pdo->lastInsertId();
             foreach ($_SESSION['shoppingcart'] as $cartitem) {
