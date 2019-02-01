@@ -1,8 +1,11 @@
 <?php
-require_once("../../model/php/core.php");
 require_once("../../view/php/partials/_scripts.php");
 require_once("../../controller/php/user.php");
 require_once("../../controller/php/gebruiker.php");
+//if session isnt started do this
+if(session_id() == '' || !isset($_SESSION)) {
+    session_start();
+}
 
 ?>
 <script src="../../controller/js/logout.js"></script>
@@ -43,21 +46,20 @@ require_once("../../controller/php/gebruiker.php");
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addmedewerker.php'>Mederwerker toevoegen</a>
                    </li>";
-                  echo "<li class='nav-item'>
-                       <a class='nav-link' href='bestellingen.php'>Bestellingen</a>
-                   </li>";
+
               } elseif ($_SESSION['role'] == 2) {
                   require_once("../../controller/php/medewerker.php");
                   $user = new medewerker();
                   echo "<li class='nav-item'>
                        <a class='nav-link' href='addproduct.php'>Product toevoegen</a>
                    </li>";
-                  echo "<li class='nav-item'>
-                       <a class='nav-link' href='bestellingen.php'>Bestellingen</a>
-                   </li>";
+
               } else{
               }
               if ($_SESSION['loggedin']) {
+                  echo "<li class='nav-item'>
+                       <a class='nav-link' href='bestellingen.php'>Bestellingen</a>
+                   </li>";
                   echo "<li class='nav-item'>
                        <a class='nav-link logout' href='javascript:;'>Logout</a>
                    </li>";

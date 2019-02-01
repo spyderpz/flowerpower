@@ -32,7 +32,7 @@ if(isset($_POST['bestel'])){
     if($_POST['bestel']){
         require_once("../../controller/php/winkelwagen.php");
         $cart = new winkelwagen();
-        $res = $cart->confirmorder($_POST['ophaaldatum']);
+        $res = $cart->confirmorder($_POST['ophaaldatum'],$_POST['ophaallocatie']);
         if($res){
             echo true;
         }else{
@@ -45,8 +45,29 @@ if(isset($_POST['addtocart'])){
     if($_POST['addtocart']){
         require_once("../../controller/php/user.php");
         $user = new user();
-        $res = $user->addtoshoppingcart($_POST['prodid'],$_POST['amount']);
-        var_dump($res);
+        if(isset($_SESSION['userid'])){
+            $res = $user->addtoshoppingcart($_POST['prodid'],$_POST['amount']);
+            echo true;
+        }else{
+            echo false;
+        }
+
         $_POST['addtocart'] = false;
+
+    }
+}
+if(isset($_POST['getbestelling'])){
+    if($_POST['getbestelling']){
+        require_once("../../controller/php/bestellingen.php");
+        $bestelling = new bestellingen();
+        if(isset($_SESSION['userid'])){
+            $res = $bestelling->getbestellingen($_POST['prodid'],$_POST['amount']);
+            echo true;
+        }else{
+            echo false;
+        }
+
+        $_POST['getbestelling'] = false;
+
     }
 }

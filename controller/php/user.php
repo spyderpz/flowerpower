@@ -62,6 +62,7 @@ class user
         }
     }
     function logout(){
+        unset($_POST);
         $_SESSION['loggedin'] = false;
         session_destroy();
         session_start();

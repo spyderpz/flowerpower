@@ -9,7 +9,6 @@ require_once("../../view/php/partials/_menu.php");
 ?>
 
 <?php
-require_once("../../model/php/core.php");
 if(isset($_SESSION['role'])){
     if($_SESSION['role'] == 1){
         $admin = new admin();

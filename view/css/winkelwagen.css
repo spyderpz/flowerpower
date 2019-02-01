@@ -1,6 +1,10 @@
-.cartimage{
+.cartimagediv{
     height:300px;
     width:300px;
+    display: inline-block;
+}
+.cartimage{
+    height:100%;
 }
 .cartitem{
     height:400px;
@@ -13,11 +17,24 @@
     box-shadow: 3px 3px 20px -2px rgba(0,0,0,0.27);
 }
 .carttitle{
-    float:left;
+    display: inline-block;
 }
-.prodamount{
-
+.totprijs{
+    display:inline-block;
 }
 .deleteprod{
-    height:30px;
+    height: 12%;
+    width: 5%;
+    position: relative;
+    top: 42%;
+    left: 69%;
+}
+.prodamount{
+    float:right;
+    top:0px;
+}
+.productprijs{
+    float:right;
+    top:50%;
+    position: relative;
 }

@@ -19,9 +19,17 @@ $(document).ready(function(){
                 url: "../../controller/php/functions.php",
                 data: {addtocart: true,prodid:id,amount:amount},
                 success: function (data) {
-                    $('.single-product').hide();
-                    $('#overlay').hide();
-                    alert('Added '+amount+ ' '+ title+ ' to your shopping cart ');
+                    if(data){
+                        $('.single-product').hide();
+                        $('#overlay').hide();
+                        alert('Added '+amount+ ' '+ title+ ' to your shopping cart ');
+                    }else{
+                        alert('Je moet ingelogd zijn om producten te bestellen');
+                        console.log(data);
+                        $('.single-product').hide();
+                        $('#overlay').hide();
+                    }
+
                 }
             });
         });
