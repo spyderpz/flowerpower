@@ -15,7 +15,7 @@ if($cartprods == false){
     foreach ($cartprods as $prod){
         $product = explode(",", $prod);
         echo "<div class='container'><div class='row' style='margin-top: 4%; margin-bottom: 4%;'><div class='cartitem'>
-                        <div class='cartimagediv'><img src='".$product[0]."' class='img-responsive cartimage' style='width:100%' alt='Image' onerror='imgError(this);'></div>
+                        <div class='cartimagediv'><img src='".$product[0]."' class='img-responsive cartimage' style='width:100%; object-fit:cover;' alt='Image' onerror='imgError(this);'></div>
                         <div class='carttitle'><h2>".$product[1]."</h2></div><div class='prodamount'><h4>Hoeveelheid: ".$product[2]."</h4></div><div class='productprijs'><h4>TotaalPrijs: €".$product[3]*$product[2]."<div class='singleprice'>Per artikel: €".$product[3]."</div></div></h4><button id='".$product[4]."' class='btn btn-danger deleteprod'>Delete</button>
                         <hr>
                    </div></div>";
