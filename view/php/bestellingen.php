@@ -14,11 +14,11 @@ if(isset($_POST['allorder'])){
 }
 
 if($bestellingen == false){
-    echo 'je hebt geen bestellingen';
+    echo "<div class='container'><div class='' style='margin-top: 4%; margin-bottom: 4%;'>je hebt geen bestellingen";
 }else{
     foreach ($bestellingen as $bestelling){
 
-        echo "<div class='bestelling' id='bestelling".$bestelling['id']."'>
+        echo "<div class='container'><div class='' style='margin-top: 4%; margin-bottom: 4%;'><div class='bestelling' id='bestelling".$bestelling['id']."'>
               <div class='besteladdres'> Locatie: ".$bestelling['OphaalLocatie']." 	&nbsp</div><br><div class='besteldatum'>Ophaaldatum: ".$bestelling['Ophaaldatum']."&nbsp</div><div class='besteltotprijs'>   Bestellingprijs: €".$bestelling['Totprijs']."	&nbsp</div><div class='bestellingprod'><br><br>  Producten: <table border='1' class='prodtable'><tr>
             <th>Productnaam</th>
             <th>Prijs</th>
@@ -49,7 +49,7 @@ if($bestellingen == false){
 
         echo"  </div>";
     }
-    echo "<button class='allorders btn btn-primary'>Alle bestellingen</button>";
+    echo "<button class='allorders btn btn-primary' style='margin-top:2%;'>Alle bestellingen</button></div></div>";
 }
 
 
