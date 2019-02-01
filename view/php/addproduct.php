@@ -23,12 +23,12 @@ if(isset($_SESSION['role'])){
                     <label for='addproducttitle'>Producttitle:</label>
                     <input id='addproducttitle' name='producttitle' class='form-control'>
                   </div>
-                  <label for='addproductimage'>Afbeelding:</label>
-  
+                  <label for='addproductimage'>Afbeelding:</label> <br>
+
                       <input name='picture' type='file' />
-  
+
                   <br>
-                  <div class='form-group'>
+                  <div class='form-group' style='padding-top:5%;'>
                     <label for='addproductdesc'>Productbeshrijving:</label>
                     <textarea id='addproductdesc' name='productbeschrijving' class='form-control' rows='1' cols='30'></textarea>
                   </div>

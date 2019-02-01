@@ -22,4 +22,5 @@
   width: 100%;
   background-image: url(../../model/img/banner/login.jpg);
   object-fit: cover;
+  background-size: cover;
 }

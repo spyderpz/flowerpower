@@ -13,7 +13,7 @@ if(isset($_SESSION['role'])){
     if($_SESSION['role'] == 1){
         $admin = new admin();
         $userarr = $admin->getusers();
-        echo '<div class="border-box">
+        echo '<div class="border-box" style="display:flex; justify-content:center; align-items:center;">
                     <table class="usertable">
                  <tr>
                     <th>Opties</th>
@@ -36,14 +36,14 @@ if(isset($_SESSION['role'])){
                      <th class="'.$user['id'].'geboortedatum">'.$user['Geboortedatum'].'</th>
                      <th class="'.$user['id'].'postcode">'.$user['Postcode'].'</th>
                      <th class="'.$user['id'].'woonplaats">'.$user['Woonplaats'].'</th>
-                     <th class="'.$user['id'].'rolid">'.$user['RolId'].'</th>                   
+                     <th class="'.$user['id'].'rolid">'.$user['RolId'].'</th>
 
 ';
         }
         echo '</table></div>';
         echo'
-        <div class="row login-wrapper">
-        <h2 class="title-page col-12">Medewerker toevoegen</h2>
+        <div class="row login-wrapper" style="margin-top:3%; margin-bottom:3%;">
+        <h2 class="title-page col-12" styling="margin-bottom:3%;">Medewerker toevoegen</h2>
         <div class="form-div col-4">
         <div class="border-box">
             <form class="" value="addmedewerker" action="javascript::" method="post">
