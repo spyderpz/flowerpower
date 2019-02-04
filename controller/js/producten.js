@@ -13,13 +13,13 @@ $(document).ready(function(){
 
         $(".addtocart").on("click", function() {
             var amount = $('.flowerquantity'+id).val();
-            console.log(amount);
             $.ajax({
                 type: "post",
                 url: "../../controller/php/functions.php",
                 data: {addtocart: true,prodid:id,amount:amount},
                 success: function (data) {
-                    if(data){
+                    console.log(data);
+                    if(data == true){
                         $('.single-product').hide();
                         $('#overlay').hide();
                         alert('Added '+amount+ ' '+ title+ ' to your shopping cart ');

@@ -25,9 +25,7 @@ if(session_id() == '' || !isset($_SESSION)) {
             <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../controller/php/factuur.php">Temptest</a>
-            </li>
+
         </ul>
         <span class="navbar-text">
       <ul class="navbar-nav mr-auto">

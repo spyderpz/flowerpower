@@ -40,8 +40,25 @@ $(document).ready(function(){
             data: {allorder: true},
             success: function (data) {
                 $('body').replaceWith(data);
-                console.log(data);
                 // location.href = 'http://localhost/home/flowerpower/view/php/bestellingen.php';
+            }
+        });
+    });
+    $(".factuur").on("click", function() {
+        var bestelnmr = this.id;
+        var i = 0;
+        var prodids = [];
+        var prods = $("."+bestelnmr+"productnaam").toArray();
+        $("."+bestelnmr+"productnaam").each(function(){
+            prodids[i] = this.id;
+            i++;
+        });
+        $.ajax({
+            type: "post",
+            url: "../../controller/php/functions.php",
+            data: {factuur: true,bestelnmr:bestelnmr,prodids:prodids},
+            success: function (data) {
+                location.href = 'http://localhost/home/flowerpower/controller/php/factuur.php';
             }
         });
     });

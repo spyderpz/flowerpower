@@ -26,6 +26,7 @@ class bestellingen{
                 $bestellingen[$x]['status'] = $row['Status'];
                 $i = 0;
                 foreach($productinfo[$row['id']] as $product){
+                    $bestellingen[$x]['Producten'][$i]['prodid'] = $product['id'];
                     $bestellingen[$x]['Producten'][$i]['productnaam'] = $product['Productnaam'];
                     $bestellingen[$x]['Producten'][$i]['prijs'] = $product['Prijs'];
                     $bestellingen[$x]['Producten'][$i]['hoeveelheid'] = $product['Amount'];
@@ -51,17 +52,20 @@ class bestellingen{
 
 
             $x = 0;
+            //complicated refractoring
             while ($row = $bestellingquery->fetch()){
                 $productinfo = $this->getbestellingprods($row['id']);
+                $bestellingen[$x]['id'] = $row['id'];
                 $bestellingen[$x]['Ophaaldatum'] = $row['Ophaaldatum'];
                 $bestellingen[$x]['OphaalLocatie'] = $row['OphaalLocatie'];
                 $bestellingen[$x]['Totprijs'] = $row['Totaalprijs'];
+                $bestellingen[$x]['status'] = $row['Status'];
                 $i = 0;
                 foreach($productinfo[$row['id']] as $product){
+                    $bestellingen[$x]['Producten'][$i]['prodid'] = $product['id'];
                     $bestellingen[$x]['Producten'][$i]['productnaam'] = $product['Productnaam'];
                     $bestellingen[$x]['Producten'][$i]['prijs'] = $product['Prijs'];
                     $bestellingen[$x]['Producten'][$i]['hoeveelheid'] = $product['Amount'];
-
                     $i++;
                 }
                 $x++;

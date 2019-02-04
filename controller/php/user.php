@@ -64,8 +64,8 @@ class user
     function logout(){
         unset($_POST);
         $_SESSION['loggedin'] = false;
-        session_destroy();
         session_start();
+        session_destroy();
     }
     function addtoshoppingcart($item_id,$amount){
         if(!isset($_SESSION['shoppingcart'])){

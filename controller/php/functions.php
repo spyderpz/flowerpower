@@ -45,15 +45,17 @@ if(isset($_POST['addtocart'])){
     if($_POST['addtocart']){
         require_once("../../controller/php/user.php");
         $user = new user();
-        if(isset($_SESSION['userid'])){
-            $res = $user->addtoshoppingcart($_POST['prodid'],$_POST['amount']);
-            echo true;
+        if(isset($_SESSION['loggedin'])){
+            if($_SESSION['loggedin']) {
+                $res = $user->addtoshoppingcart($_POST['prodid'], $_POST['amount']);
+                echo true;
+            }else{
+                echo false;
+            }
         }else{
             echo false;
         }
-
         $_POST['addtocart'] = false;
-
     }
 }
 if(isset($_POST['getbestelling'])){
@@ -109,6 +111,14 @@ function bestellingstatus(){
     }else{
         echo false;
     }
-
-
+}
+if(isset($_POST['factuur'])){
+    if($_POST['factuur']){
+        $_SESSION['factuur'] = true;
+        $_SESSION['bestelnmr'] = $_POST['bestelnmr'];
+        $_SESSION['prodids'] = $_POST['prodids'];
+        $_POST['factuur'] = false;
+    }else{
+        var_dump($_POST);
+    }
 }

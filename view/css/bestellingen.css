@@ -30,9 +30,16 @@
 }
 .bestellingdone{
     height: 12%;
-    width:9%;
+    width:10%;
     position: relative;
     top: 42%;
     left: 85%;
 }
-
+.factuur{
+    height: 12%;
+    width:9%;
+    position: relative;
+    top: 25%;
+    left: 85%;
+    display: grid;
+}
