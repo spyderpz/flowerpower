@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 01 feb 2019 om 09:33
+-- Gegenereerd op: 05 feb 2019 om 09:36
 -- Serverversie: 5.7.14
 -- PHP-versie: 5.6.25
 
@@ -43,7 +43,9 @@ CREATE TABLE `bestellingen` (
 INSERT INTO `bestellingen` (`id`, `PersoonId`, `Ophaaldatum`, `OphaalLocatie`, `Totaalprijs`, `Status`, `madeBy`) VALUES
 (21, 4, '2019-01-16', 'karspellaan', 5780, 1, 0),
 (22, 4, '2019-02-20', 'karspellaan', 30, 3, 4),
-(23, 9, '2019-02-03', 'flevostraat', 632, 2, 4);
+(23, 9, '2019-02-03', 'flevostraat', 632, 3, 4),
+(24, 4, '2019-02-23', 'karspellaan', 72, 2, 4),
+(25, 10, '2019-02-19', 'karspellaan', 12, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,10 @@ INSERT INTO `bestellingproducten` (`id`, `BestellingId`, `ProductId`, `Amount`) 
 (40, 22, 6, 2),
 (41, 23, 2, 1),
 (42, 23, 3, 1),
-(43, 23, 20, 2);
+(43, 23, 20, 2),
+(44, 24, 1, 3),
+(45, 25, 1, 1),
+(46, 25, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -100,7 +105,9 @@ INSERT INTO `personen` (`id`, `Voornaam`, `Achternaam`, `Wachtwoord`, `Email`, `
 (6, 'hen', 'k', 'ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff', 'henkhenk@henk.com', '2000-05-16', '7887EZ', 'Erica', 3),
 (7, 'd', 'd', '150990c01ce3198086c91576d323046d5cd72c3846bb006c96ba4bbb2fea819e0c0be618b54da576daca212f10340c57ab2f09b46666f1e2c15056ae77b22527', 'd@d.com', '2011-08-01', '7887EZ', 'e', 3),
 (8, 'd', 'd', '99c426cc0bf3c465f9c4a49e5a6c3d09a43c4f95631776b354be0727f3f65567ae9357c5d55015e2cfbb27ead98e1bb54f2a0f26042ad267a279f0e3a8c5b2e9', 'dd@d.com', '2011-08-19', '7887EZ', 'Erica', 3),
-(9, 'LA', 'LA', '364d2d1555bfab86ed13fefc935b2c70255d144fc4620ed06f3687a1080625e35708f2753e1eb00b39af850b3794a6a2834c66f48806b2861c8c79d1376414d3', 'la@la.com', '2011-08-08', '7887EZ', 'Erica', 3);
+(9, 'LA', 'LA', '364d2d1555bfab86ed13fefc935b2c70255d144fc4620ed06f3687a1080625e35708f2753e1eb00b39af850b3794a6a2834c66f48806b2861c8c79d1376414d3', 'la@la.com', '2011-08-08', '7887EZ', 'Erica', 3),
+(10, 'klant', 'klant', '9a6c0a9030cb13ecce091cd175a245e884acd39a54ccfd336bc9863b0bc0d66bc16c325ed44a1a40f2c9d52292072475665e1d0527195da601fbb0741cee2e22', 'klant@klant.com', '2000-02-08', '7887EZ', 'Erica', 3),
+(11, 'lol', 'lol', '3dd28c5a23f780659d83dd99981e2dcb82bd4c4bdc8d97a7da50ae84c7a7229a6dc0ae8ae4748640a4cc07ccc2d55dbdc023a99b3ef72bc6ce49e30b84253dae', 'lol@lol.com', '2011-08-08', '7887EZ', 'eRICA', 3);
 
 -- --------------------------------------------------------
 
@@ -206,17 +213,17 @@ ALTER TABLE `rollen`
 -- AUTO_INCREMENT voor een tabel `bestellingen`
 --
 ALTER TABLE `bestellingen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT voor een tabel `bestellingproducten`
 --
 ALTER TABLE `bestellingproducten`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT voor een tabel `personen`
 --
 ALTER TABLE `personen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT voor een tabel `producten`
 --
